@@ -8,13 +8,11 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-
 interface TooltipData {
   avgHousePrice: number;
   medSalary: number;
   year: string;
 }
-
 
 interface CustomTooltipProps {
   payload?: { payload: TooltipData }[]; // Payload comes as an array of objects

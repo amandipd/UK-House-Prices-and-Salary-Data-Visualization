@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="content-evenly">
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/amandipd/UK-House-Prices-and-Salary-Data-Visualization"
         target="_blank"
         rel="noopener noreferrer"
         className="github-link"

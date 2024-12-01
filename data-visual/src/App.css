@@ -5,12 +5,19 @@
 body {
   background-color: #ffffff;
   font-family: "Playfair Display", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content-evenly {
+  position: relative;
+  text-align: center;  /* Ensure the title is centered */
 }
 
 .github-link {
-  position: fixed;
-  top: 16px;
-  right: 16px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
   z-index: 1000;
 }
 
@@ -24,3 +31,15 @@ body {
 .github-icon:hover {
   transform: scale(1.1);
 }
+
+h1 {
+  display: inline-block;  /* Keep the title inline, centered */
+  margin-right: 60px;     /* Ensure space for the GitHub icon */
+  vertical-align: middle; /* Align the title vertically with the icon */
+}
+
+
+
+
+
+
