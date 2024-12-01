@@ -8,6 +8,19 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+
+interface TooltipData {
+  avgHousePrice: number;
+  medSalary: number;
+  year: string;
+}
+
+
+interface CustomTooltipProps {
+  payload?: { payload: TooltipData }[]; // Payload comes as an array of objects
+  label?: string; // Label will be a string (year)
+}
+
 const data = [
   { year: "2000", avgHousePrice: 145756, medSalary: 32443.92 },
   { year: "2001", avgHousePrice: 163517, medSalary: 33357.5 },
@@ -32,7 +45,7 @@ const data = [
   { year: "2020", avgHousePrice: 239753, medSalary: 31487 },
 ];
 
-const CustomTooltip = ({ payload, label }) => {
+const CustomTooltip = ({ payload, label }: CustomTooltipProps) => {
   if (!payload || payload.length === 0) return null;
   const { avgHousePrice, medSalary } = payload[0].payload;
 

@@ -64,7 +64,7 @@ function App() {
           </h2>
           <HorizontalBarChart
             data={maleSalaries}
-            dataKey="salary"
+            dataKey="value"
             barColor="#1E40AF"
           />
         </div>
@@ -74,7 +74,7 @@ function App() {
           </h2>
           <HorizontalBarChart
             data={femaleSalaries}
-            dataKey="salary"
+            dataKey="value"
             barColor="#962c87"
           />
         </div>
