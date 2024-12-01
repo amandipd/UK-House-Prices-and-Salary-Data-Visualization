@@ -1,31 +1,30 @@
-import { useState } from "react";
 import "./App.css";
 import AreaChartComponent from "./components/AreaChartComponent";
 import HorizontalBarChart from "./components/HorizontalBarChartComponent";
 import DoubleBarChart from "./components/DoubleBarChartComponent";
 
 const maleSalaries = [
-  { age: "18-21", salary: 18392 },
-  { age: "22-29", salary: 26856 },
-  { age: "30-39", salary: 34210 },
-  { age: "40-49", salary: 38463 },
-  { age: "50-59", salary: 36000 },
-  { age: "60+", salary: 30944 },
+  { age: "18-21", value: 18392 },
+  { age: "22-29", value: 26856 },
+  { age: "30-39", value: 34210 },
+  { age: "40-49", value: 38463 },
+  { age: "50-59", value: 36000 },
+  { age: "60+", value: 30944 },
 ];
 
 const femaleSalaries = [
-  { age: "18-21", salary: 17005 },
-  { age: "22-29", salary: 25115 },
-  { age: "30-39", salary: 30540 },
-  { age: "40-49", salary: 31679 },
-  { age: "50-59", salary: 28811 },
-  { age: "60+", salary: 24850 },
+  { age: "18-21", value: 17005 },
+  { age: "22-29", value: 25115 },
+  { age: "30-39", value: 30540 },
+  { age: "40-49", value: 31679 },
+  { age: "50-59", value: 28811 },
+  { age: "60+", value: 24850 },
 ];
 
 const combinedSalaries = maleSalaries.map((item, index) => ({
   age: item.age,
-  menSalary: item.salary,
-  womenSalary: femaleSalaries[index].salary,
+  menSalary: item.value,
+  womenSalary: femaleSalaries[index].value,
 }));
 
 function App() {

@@ -11,7 +11,7 @@ import {
 } from "recharts";
 
 interface HorizontalBarChartProps {
-  data: { age: string; value: number }[];
+  data: { age: string; value: number }[];  // Expecting value here
   dataKey: string;
   barColor?: string;
 }
@@ -40,10 +40,10 @@ const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({
           labelFormatter={() => ""}
           itemStyle={{ textTransform: "capitalize" }}
           content={({ payload }) =>
-            payload && payload.length ? (
+            payload && payload.length > 0 && payload[0] ? (
               <div className="custom-tooltip p-2 bg-white border rounded shadow">
                 <p className="text-sm font-bold">{`Age Group: ${payload[0].payload.age}`}</p>
-                <p className="text-sm">{`Salary: $${payload[0].value.toLocaleString()}`}</p>
+                <p className="text-sm">{`Salary: $${payload[0]?.value?.toLocaleString()}`}</p> {/* Optional chaining */}
               </div>
             ) : null
           }
@@ -58,7 +58,7 @@ const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({
           <LabelList
             dataKey={dataKey}
             position="right"
-            formatter={(value) => `$${value.toLocaleString()}`}
+            formatter={(value: number) => `$${value.toLocaleString()}`}
             fill="#333"
             fontWeight="bold"
           />
