@@ -1,4 +1,4 @@
-# UK House Prices and Salary Data Visualization Dashboard
+# UK House Prices and Salary Data Visualization Dashboard (Completed)
 ## Project Link: [House Prices & Salary](https://amandipd.github.io/UK-House-Prices-and-Salary-Data-Visualization/)
 ### Preview:
 ![image](https://github.com/user-attachments/assets/9b828e3c-3da0-435b-964c-04f86a19bf15)
